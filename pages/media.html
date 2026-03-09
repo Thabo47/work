@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Media — Greenfield University Portal</title>
+  <!-- Shared stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header>
+    <div class="header-inner">
+      <img src="../media/logo.jpg" alt="Greenfield University logo" width="72" height="72" />
+      <div>
+        <h1>Greenfield University</h1>
+        <p>Student Registration &amp; Information Portal</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav>
+    <div class="nav-inner">
+      <a href="../index.html">Home</a>
+      <a href="register.html">Register</a>
+      <a href="records.html">Student Records</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="media.html" class="active">Media</a>
+      <a href="resources.html">Resources</a>
+    </div>
+  </nav>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main>
+
+    <!-- Part D: Video Display -->
+    <section id="media">
+      <h2>University Welcome Video</h2>
+
+      <!-- Video player card -->
+      <div class="video-wrap">
+                <video controls poster="../media/university_photo.jpg">
+          <source src="../media/university_intro.mp4" type="video/mp4" />
+          <source src="../media/university_intro.ogg" type="video/ogg" />
+          <!-- Fallback for browsers that do not support HTML5 video -->
+          <span class="video-fallback">
+            Your browser does not support the HTML5 &lt;video&gt; tag.
+            Please upgrade to a modern browser to watch this video.
+          </span>
+        </video>
+
+        <p class="video-caption">
+          Welcome Address — Dean of the Faculty of Computing
+        </p>
+
+      </div>
+
+      <!-- Part E: hr separator -->
+      <hr />
+
+      <!-- Info text with br usage -->
+      <div class="video-info">
+        <p>Videos are a key part of Greenfield's student onboarding experience.</p>
+        <br />
+        <p>More video content will be added as the academic year progresses.</p>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>&copy; 2026 Greenfield University — Student Portal &nbsp;|&nbsp; Web Development Assessment 2</p>
+    <p>Instructor: Mr. Kefuoe Sole &nbsp;|&nbsp; Academic Year 2026</p>
+  </footer>
+
+</body>
+</html>
