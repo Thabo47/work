@@ -244,26 +244,74 @@ textarea {
 
 .btn-row {
   display: flex;
-  gap: 12px;
-  margin-top: 24px;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
 }
 
 .btn {
-  padding: 11px 28px;
-  border: none;
-  border-radius: 5px;
+  padding: 13px 32px;
+  border: 2px solid transparent;
+  border-radius: 6px;
   font-family: 'Source Sans 3', sans-serif;
   font-size: 0.95rem;
-  font-weight: 600;
+  font-weight: 700;
   cursor: pointer;
-  letter-spacing: 0.5px;
-  transition: opacity 0.2s;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  transition: background 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s, transform 0.1s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 }
 
-.btn-submit { background: var(--navy);  color: var(--white); }
-.btn-reset  { background: #e8e0cc;      color: var(--navy);  }
-.btn-save   { background: var(--gold);  color: var(--navy);  }
-.btn:hover  { opacity: 0.85; }
+/* Submit — solid navy, gold border on hover */
+.btn-submit {
+  background: var(--navy);
+  color: var(--white);
+  border-color: var(--navy);
+  box-shadow: 0 3px 10px rgba(13,27,62,0.25);
+}
+
+.btn-submit:hover {
+  background: #1a2f6e;
+  border-color: var(--gold);
+  box-shadow: 0 5px 16px rgba(13,27,62,0.35);
+  transform: translateY(-1px);
+}
+
+.btn-submit:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* Reset — outlined style */
+.btn-reset {
+  background: transparent;
+  color: var(--navy);
+  border-color: var(--border);
+}
+
+.btn-reset:hover {
+  background: #ede8d8;
+  border-color: var(--mid);
+}
+
+/* Save Draft — gold accent */
+.btn-save {
+  background: var(--gold);
+  color: var(--navy);
+  border-color: var(--gold);
+}
+
+.btn-save:hover {
+  background: #b8933e;
+  border-color: #b8933e;
+  color: var(--white);
+  transform: translateY(-1px);
+}
 
 /* ================================================
    TABLE STYLES  (records.html)
@@ -571,8 +619,8 @@ footer {
 
   .btn {
     width: 100%;
-    text-align: center;
-    padding: 13px 20px;
+    justify-content: center;
+    padding: 14px 20px;
   }
 
   /* --- Table: allow horizontal scroll --- */
